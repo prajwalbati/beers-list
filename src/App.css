@@ -36,6 +36,13 @@
   padding: 2em;
   max-height: 155px;
   box-shadow: 0px 5px 3px 3px #ddd8d894;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #f3f8fd;
+  box-shadow: none;
+  border:var(--bs-card-border-width) solid rgb(0 0 0 / 1%)
 }
 
 .card h6 {
@@ -58,6 +65,7 @@
   color: #808080;
   font-weight: 500;
   padding-left: 0;
+  cursor: pointer;
 }
 .nav a.active{
   color: #333;

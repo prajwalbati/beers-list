@@ -19,6 +19,9 @@ function BeerList() {
   }, [beers]);
 
   useEffect(() => {
+    if (page == 1) {
+      setAllBeers([]);
+    }
     dispatch(getAllBeers({ page, perPage }));
   }, [page, perPage]);
 
