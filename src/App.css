@@ -2,7 +2,6 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
 .logo {
@@ -35,8 +34,31 @@
 
 .card {
   padding: 2em;
+  max-height: 155px;
+  box-shadow: 0px 5px 3px 3px #ddd8d894;
+}
+
+.card h6 {
+  color: #dcaf55;
+}
+
+.card p {
+  font-size: 14px;
+  max-height: 45px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.nav a{
+  font-size: 18px;
+  color: #808080;
+  font-weight: 500;
+  padding-left: 0;
+}
+.nav a.active{
+  color: #333;
 }
