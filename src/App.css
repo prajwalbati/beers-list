@@ -62,3 +62,8 @@
 .nav a.active{
   color: #333;
 }
+
+.loadMore {
+  text-decoration: none;
+  cursor: pointer;
+}
