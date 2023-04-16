@@ -1,8 +1,7 @@
-import * as React from 'react';
 import { usePopperTooltip } from 'react-popper-tooltip';
 import 'react-popper-tooltip/dist/styles.css';
 
-function BeerItem(props: any) {
+function Beer(props: any) {
     const {
         getArrowProps,
         getTooltipProps,
@@ -48,4 +47,4 @@ function BeerItem(props: any) {
     )
 }
 
-export default BeerItem;
+export default Beer;

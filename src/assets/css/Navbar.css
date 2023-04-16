@@ -1,0 +1,15 @@
+.nav a {
+    font-size: 18px;
+    color: #808080;
+    font-weight: 500;
+    padding-left: 0;
+    cursor: pointer;
+}
+
+.nav a.active {
+    color: #333;
+}
+
+.addBeerBtn {
+    margin-left: auto;
+}

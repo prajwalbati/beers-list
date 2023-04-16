@@ -1,7 +1,9 @@
+@import './assets/css/Beer.css';
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 4rem 2rem 2rem;
 }
 
 .logo {
@@ -30,74 +32,4 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
-  max-height: 155px;
-  box-shadow: 0px 5px 3px 3px #ddd8d894;
-  cursor: pointer;
-}
-
-.card:hover {
-  background-color: #f3f8fd;
-  box-shadow: none;
-  border:var(--bs-card-border-width) solid rgb(0 0 0 / 1%)
-}
-
-.card h6 {
-  color: #dcaf55;
-}
-
-.card p {
-  font-size: 14px;
-  max-height: 45px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.nav a{
-  font-size: 18px;
-  color: #808080;
-  font-weight: 500;
-  padding-left: 0;
-  cursor: pointer;
-}
-.nav a.active{
-  color: #333;
-}
-
-.loadMore {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.tooltip-container {
-  background-color: black !important;
-  color: white !important;
-  font-size: 12px;
-}
-
-.tooltip-container .tooltip-arrow::after {
-  border-color: transparent transparent transparent #000;
-}
-
-.addBeerBtn {
-  margin-left: auto;
-}
-
-.noBeerContent {
-  font-weight: 400;
-}
-
-.noBeerContent a {
-  text-decoration: none;
-}
-
-.customBeerImage img {
-  border: 1px solid #d1c8c8;
 }
