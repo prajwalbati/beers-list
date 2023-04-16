@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import BeerList from './beer';
 import MyBeerList from './beer/myBeerList';
+import AddBeerModal from './beer/addBeerModal';
 
 function App() {
   const [listType, setListType] = useState<string>('all');
@@ -22,6 +23,9 @@ function App() {
           <li className="nav-item">
             <a className={listType=='my'?'nav-link active':'nav-link'} onClick={() => loadBeers('my')}>My Beers</a>
           </li>
+          <li className={listType=='my'?'addBeerBtn':'d-none'}>
+            <button className='btn btn-primary' onClick={() => loadBeers('my')}>Add a new beer</button>
+          </li>
         </ul>
       </div>
       {listType=== 'all' ? (
@@ -31,6 +35,7 @@ function App() {
       ) : (
         <div className="allBeers">
           <MyBeerList></MyBeerList>
+          <AddBeerModal></AddBeerModal>
         </div>
       )}
     </div>
