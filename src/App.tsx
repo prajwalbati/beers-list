@@ -6,11 +6,20 @@ import AddBeerModal from './beer/addBeerModal';
 
 function App() {
   const [listType, setListType] = useState<string>('all');
+  const [showAddBeerModal, setShowAddBeerModal] = useState<boolean>(false);
 
   const loadBeers = (type: string) => {
     if (listType != type) {
       setListType(type);
     }
+  };
+
+  const openModal = () => {
+    setShowAddBeerModal(true);;
+  };
+
+  const closeModal = () => {
+    setShowAddBeerModal(false);
   };
 
   return (
@@ -24,7 +33,7 @@ function App() {
             <a className={listType=='my'?'nav-link active':'nav-link'} onClick={() => loadBeers('my')}>My Beers</a>
           </li>
           <li className={listType=='my'?'addBeerBtn':'d-none'}>
-            <button className='btn btn-primary' onClick={() => loadBeers('my')}>Add a new beer</button>
+            <button className='btn btn-primary' onClick={openModal}>Add a new beer</button>
           </li>
         </ul>
       </div>
@@ -34,8 +43,8 @@ function App() {
         </div>
       ) : (
         <div className="allBeers">
-          <MyBeerList></MyBeerList>
-          <AddBeerModal></AddBeerModal>
+          <MyBeerList openModal={openModal}></MyBeerList>
+          <AddBeerModal showAddBeerModal={showAddBeerModal} closeModal={closeModal}></AddBeerModal>
         </div>
       )}
     </div>

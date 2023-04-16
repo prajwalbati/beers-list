@@ -97,3 +97,7 @@
 .noBeerContent a {
   text-decoration: none;
 }
+
+.customBeerImage img {
+  border: 1px solid #d1c8c8;
+}
