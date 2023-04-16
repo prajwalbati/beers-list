@@ -33,9 +33,13 @@
     font-size: 12px;
 }
 
-.tooltip-container .tooltip-arrow::after {
-    border-color: transparent transparent transparent #000;
- }
+.tooltip-container[data-popper-placement*='top'] .tooltip-arrow::after, .tooltip-container[data-popper-placement*='top'] .tooltip-arrow::before {
+    border-color: #000 transparent transparent transparent !important;
+}
+
+.tooltip-container[data-popper-placement*='bottom'] .tooltip-arrow::after, .tooltip-container[data-popper-placement*='bottom'] .tooltip-arrow::before {
+    border-color: transparent transparent #000 transparent !important;
+}
 
 .noBeerContent {
     font-weight: 400;
