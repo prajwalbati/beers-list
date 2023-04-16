@@ -75,3 +75,13 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.tooltip-container {
+  background-color: black !important;
+  color: white !important;
+  font-size: 12px;
+}
+
+.tooltip-container .tooltip-arrow::after {
+  border-color: transparent transparent transparent #000;
+}
