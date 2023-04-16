@@ -68,6 +68,7 @@ const AddBeerModal = (props: any) => {
 
             reset();
             handleClose();
+            props.beerAdded();
         } catch (e) {
             reset();
             handleClose();

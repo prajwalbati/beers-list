@@ -7,6 +7,7 @@ import AddBeerModal from './beer/addBeerModal';
 function App() {
   const [listType, setListType] = useState<string>('all');
   const [showAddBeerModal, setShowAddBeerModal] = useState<boolean>(false);
+  const[reloadBeers, setReloadBeers] = useState<boolean>(false);
 
   const loadBeers = (type: string) => {
     if (listType != type) {
@@ -15,11 +16,16 @@ function App() {
   };
 
   const openModal = () => {
-    setShowAddBeerModal(true);;
+    setShowAddBeerModal(true);
+    setReloadBeers(false);
   };
 
   const closeModal = () => {
     setShowAddBeerModal(false);
+  };
+
+  const beerAdded = () => {
+    setReloadBeers(true);
   };
 
   return (
@@ -43,8 +49,8 @@ function App() {
         </div>
       ) : (
         <div className="allBeers">
-          <MyBeerList openModal={openModal}></MyBeerList>
-          <AddBeerModal showAddBeerModal={showAddBeerModal} closeModal={closeModal}></AddBeerModal>
+          <MyBeerList openModal={openModal} reloadBeers={reloadBeers}></MyBeerList>
+          <AddBeerModal showAddBeerModal={showAddBeerModal} closeModal={closeModal} beerAdded={beerAdded} ></AddBeerModal>
         </div>
       )}
     </div>
